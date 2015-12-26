@@ -9,6 +9,9 @@ def trade_spider(max_pages):
         plain_text = source_code.text
         #plain text is source code from web space
         soup = BeautifulSoup(plain_text)
+        #attribute looking for = 2nd arg
+        for link in soup.findAll('a', {'class': 'item-name'}):
+            href = link.get('href')
+        page += 1
         
-        for link in soup.findAll('a', ):
-            
+trade_spider(1)
