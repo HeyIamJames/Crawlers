@@ -10,5 +10,4 @@ def ethernet_frame(data):
 
 def get_mac_addr(bytes_addr):
   bytes_str = map( {}.format)
-  mac_addr = 
   
