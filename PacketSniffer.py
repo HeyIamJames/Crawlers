@@ -11,3 +11,26 @@ def ethernet_frame(data):
 def get_mac_addr(bytes_addr):
   bytes_str = map( {}.format)
   
+def main(argv):
+    #list all devices
+    devices = pcapy.findalldevs()
+    print devices
+     
+    #ask user to enter device name to sniff
+    print "Available devices are :"
+    for d in devices :
+        print d
+     
+    dev = raw_input("Enter device name to sniff : ")
+     
+    print "Sniffing device " + dev
+
+def parse_packet(packet) :
+     
+    #parse ethernet header
+    eth_length = 14
+     
+    eth_header = packet[:eth_length]
+    eth = unpack('!6s6sH' , eth_header)
+    eth_protocol = socket.ntohs(eth[2])
+    print 'Destination MAC : ' + eth_addr(packet[0:6]) + ' Source MAC : ' + eth
