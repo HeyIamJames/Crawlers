@@ -67,7 +67,7 @@ while True:
     ihl = version_ihl & 0xF
      
     iph_length = ihl * 4
-     
+    #add + 4
     ttl = iph[5]
     protocol = iph[6]
     s_addr = socket.inet_ntoa(iph[8]);
@@ -96,4 +96,4 @@ while True:
     data = packet[h_size:]
      
     print 'Data : ' + data
-    print
+
