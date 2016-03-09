@@ -1,6 +1,10 @@
 import os
+from socket import gethostbyname
 
 def get_ip_address(url):
+    return gethostbyname(url)
+
+def get_ip_address2(url):
     command = "host " + url
     #init new process
     process = os.popen(command)
@@ -9,4 +13,4 @@ def get_ip_address(url):
     #sice string pre ip
     return results[marker:].splitlines()[0]
 
-print(get_ip_address('google.com'))
+print(get_ip_address2('google.com'))
