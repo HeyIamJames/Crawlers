@@ -2,4 +2,4 @@
 
 import os
 
-host = None 
+host = IP
