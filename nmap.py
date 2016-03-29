@@ -7,3 +7,5 @@ def get_nmap(options, ip):
     return results 
      
 # min value 0x0000001e
+
+print(get_namp('-F', 'ip'))
