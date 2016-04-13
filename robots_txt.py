@@ -6,6 +6,7 @@ def ger_robots_txt(url):
         path = url
     else: 
         path - url + '/'
+    req = urllib.request.urlopen(paht + "robots.txt", data=None)
 
 # https://reddit.com/
 
